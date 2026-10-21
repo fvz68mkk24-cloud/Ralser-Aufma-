@@ -36,3 +36,6 @@ Nur `index.html`, `app.js`, `model.js`, `sw.js` und `manifest.webmanifest` gemei
 
 Ein weiterer Schutz verhindert, dass ein veraltetes App-Fenster Änderungen eines anderen Fensters überschreibt. Defekte oder unbekannte Daten werden nicht durch einen leeren Bestand ersetzt; in diesem Fall bietet die App eine Rohsicherung an.
 
+
+## Druckvorschau ab Version 8.2
+Einzelblatt oder Gesamttabelle öffnen zunächst eine sichtbare Vorschau mit ausgefüllten Werten. Erst anschließend öffnet „Jetzt drucken / PDF“ den Druckdialog. „Zurück zum Aufmaß“ erhält den Formularinhalt. Die Vorschau wurde mit den Haustürmaßen 2309/2308/2309 und 1479/1480/1481 geprüft: Fertigmaß 2305 x 1479 mm. Eine abschließende Prüfung im iPhone-Druckdialog steht aus.
