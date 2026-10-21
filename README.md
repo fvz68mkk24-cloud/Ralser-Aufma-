@@ -51,3 +51,6 @@ Das vom Nutzer bereitgestellte Original-Logo liegt unverändert als `logo-ralser
 
 ## Kompaktes Drucklogo ab Version 8.7
 Die Druckansichten zeigen eine kleinere Darstellung mit ausschließlich Bildzeichen und „Tischlerei Ralser“. Social-Media-Symbole, Webadresse und Werbeslogan werden durch den Bildausschnitt ausgeblendet; die Originaldatei bleibt unverändert.
+
+## Druckkopf ab Version 8.8
+Das kompakte Logo sitzt rechts in der Kopfzeile neben dem Titel. Die Spalte „Art“ entfällt aus der Gesamttabelle; die Türart bleibt für Berechnung und Datenspeicherung erhalten.
