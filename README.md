@@ -48,3 +48,6 @@ Fertigmaße erscheinen auf dem Einzelblatt und in der Gesamttabelle rot. Die Öf
 
 ## Logo ab Version 8.6
 Das vom Nutzer bereitgestellte Original-Logo liegt unverändert als `logo-ralser.jpg` bei und erscheint oben auf Einzelblatt und Gesamttabelle. Es ist Teil des Offline-Caches. Der Druckknopf wird erst nach Laden des Logos aktiv.
+
+## Kompaktes Drucklogo ab Version 8.7
+Die Druckansichten zeigen eine kleinere Darstellung mit ausschließlich Bildzeichen und „Tischlerei Ralser“. Social-Media-Symbole, Webadresse und Werbeslogan werden durch den Bildausschnitt ausgeblendet; die Originaldatei bleibt unverändert.
