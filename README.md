@@ -18,7 +18,7 @@ Diese Version basiert auf dem unveränderten GitHub-Stand `2052c0ce201316c611a74
 
 1. In der bisherigen App „Sicherung exportieren“ wählen und die JSON-Datei in Dateien oder Dropbox ablegen.
 2. Die vorhandene App und ihre Browserdaten vorerst behalten.
-3. Version 8 unter derselben bisherigen HTTPS-Adresse veröffentlichen. Für das Update die bisherige App und ihre Tabs schließen, danach online neu öffnen; eventuell erneut schließen und öffnen, bis V8 im Kopf erscheint. Neue Offline-Dateien aktivieren erst nach Schließen der alten App.
+3. Version 8 unter derselben bisherigen HTTPS-Adresse veröffentlichen. Für das Update die bisherige App und ihre Tabs schließen, danach online neu öffnen; eventuell erneut schließen und öffnen, bis V8 im Kopf erscheint. Ab Version 8.4 werden vollständig geladene Offline-Dateien auch bei offenen Fenstern aktiviert. Geöffnete Formulare werden nicht automatisch neu geladen.
 4. Bei gleicher Browser-Datenablage wird Version 7 automatisch übernommen. Die App behält `ralser_aufmasse` unverändert und legt zusätzlich `ralser_v7_original_backup` sowie die neue Ablage `ralser_aufmass_v8` an.
 5. Falls die Aufmaße fehlen (z. B. andere Adresse, anderer Browser oder separate iPhone-App-Ablage), die JSON-Sicherung importieren. Vorhandene Aufmaße bleiben erhalten; abweichende Einträge mit gleicher Kennung werden zusätzlich abgelegt.
 6. Kunden, Anzahl der Aufmaße und sämtliche sechs Messungen stichprobenartig vergleichen, Bauvorhaben zuordnen und eine neue V8-Sicherung exportieren. Danach im Flugmodus neu öffnen und ein Testaufmaß prüfen.
@@ -39,3 +39,6 @@ Ein weiterer Schutz verhindert, dass ein veraltetes App-Fenster Änderungen eine
 
 ## Druckvorschau ab Version 8.2
 Einzelblatt oder Gesamttabelle öffnen zunächst eine sichtbare Vorschau mit ausgefüllten Werten. Erst anschließend öffnet „Jetzt drucken / PDF“ den Druckdialog. „Zurück zum Aufmaß“ erhält den Formularinhalt. Die Vorschau wurde mit den Haustürmaßen 2309/2308/2309 und 1479/1480/1481 geprüft: Fertigmaß ab V8.3: 2306 x 1478 mm. Eine abschließende Prüfung im iPhone-Druckdialog steht aus.
+
+## Updates ab Version 8.4
+Die neue Offline-Version aktiviert sich nach erfolgreichem Download aller App-Dateien, auch wenn ein altes Fenster offen ist. Geöffnete Formulare bleiben unverändert, bis die App bewusst neu geöffnet wird. Der Button „App aktualisieren“ sucht nach Updates; nach dem Download heißt er „Neue Version öffnen“. Vor dem Öffnen bitte Änderungen speichern. Keine Browserdaten löschen. Der Update-Test `node update.test.cjs` prüft den Wechsel von V8.1 mit offenem Fenster, unveränderte Datenablagen, einen ungespeicherten Entwurf und einen Offline-Neustart.
