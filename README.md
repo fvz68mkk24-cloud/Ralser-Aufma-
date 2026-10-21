@@ -6,10 +6,10 @@ Diese Version basiert auf dem unveränderten GitHub-Stand `2052c0ce201316c611a74
 
 - Kunden und getrennte Bauvorhaben. Nummerierung je Bauvorhaben; Positionsbuchstaben direkt eingeben, z. B. 1a.
 - Alte Aufmaße zunächst unter „Altbestand – Bauvorhaben zuordnen“. Aufmaß öffnen und über „Aufmaß zuordnen“ einem neuen Bauvorhaben zuweisen.
-- Alle sechs Originalmessungen bleiben gespeichert. Fertigmaße werden separat aus der kleinsten der jeweils drei Messungen berechnet; unvollständige oder ungültige Werte ergeben keinen Fertigwert.
+- Alle sechs Originalmessungen bleiben gespeichert. Bei Innentüren werden Fertigmaße aus der kleinsten der jeweils drei Messungen berechnet; bei Haustüren aus der größten Höhe und größten Breite; unvollständige oder ungültige Werte ergeben keinen Fertigwert.
 - Innentür-Höhe: Boden verlegt 3 mm, Holzboden geplant 17 mm, Vinyl geplant 7 mm oder benutzerdefinierter Gesamtabzug. Bei Altbeständen ohne Bodenaufbau bleibt die Fertighöhe offen, bis der Bodenaufbau gewählt wird.
-- Pfostenstock-Breite: 3 mm Abzug; bei anderen Türarten kein automatischer Breitenabzug.
-- Haustür-Höhe: immer 3 mm Abzug, Messbezug Thermoholz.
+- Pfostenstock-Breite: 3 mm Abzug; bei Futterstock kein automatischer Breitenabzug.
+- Haustür: größte Höhe minus 3 mm (Messbezug Thermoholz) und größte Breite minus 3 mm.
 - A4-Einzelblatt des geöffneten Formulars mit leerem Skizzenfeld. A4-Gesamttabelle quer der gespeicherten Aufmaße des ausgewählten Bauvorhabens. Alle sechs Originalmessungen in beiden Ausgaben.
 - Druckdialog zum Speichern als PDF. A4 hoch / A4 quer werden per Druckstil vorgegeben; je nach Gerät im Druckdialog kontrollieren. Sehr lange Bemerkungen können zusätzliche Seiten beanspruchen.
 - Keine externen Bibliotheken, Schriftarten oder Netzwerkdienste. Offline nach einmaligem vollständigem Laden über HTTPS (oder localhost).
@@ -38,4 +38,4 @@ Ein weiterer Schutz verhindert, dass ein veraltetes App-Fenster Änderungen eine
 
 
 ## Druckvorschau ab Version 8.2
-Einzelblatt oder Gesamttabelle öffnen zunächst eine sichtbare Vorschau mit ausgefüllten Werten. Erst anschließend öffnet „Jetzt drucken / PDF“ den Druckdialog. „Zurück zum Aufmaß“ erhält den Formularinhalt. Die Vorschau wurde mit den Haustürmaßen 2309/2308/2309 und 1479/1480/1481 geprüft: Fertigmaß 2305 x 1479 mm. Eine abschließende Prüfung im iPhone-Druckdialog steht aus.
+Einzelblatt oder Gesamttabelle öffnen zunächst eine sichtbare Vorschau mit ausgefüllten Werten. Erst anschließend öffnet „Jetzt drucken / PDF“ den Druckdialog. „Zurück zum Aufmaß“ erhält den Formularinhalt. Die Vorschau wurde mit den Haustürmaßen 2309/2308/2309 und 1479/1480/1481 geprüft: Fertigmaß ab V8.3: 2306 x 1478 mm. Eine abschließende Prüfung im iPhone-Druckdialog steht aus.
