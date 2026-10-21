@@ -54,3 +54,6 @@ Die Druckansichten zeigen eine kleinere Darstellung mit ausschließlich Bildzeic
 
 ## Druckkopf ab Version 8.8
 Das kompakte Logo sitzt rechts in der Kopfzeile neben dem Titel. Die Spalte „Art“ entfällt aus der Gesamttabelle; die Türart bleibt für Berechnung und Datenspeicherung erhalten.
+
+## Stock und Blindstock ab Version 8.9
+Die Gesamttabelle zeigt P für Pfostenstock, F für Futterstock und S für Schiebetür. Schiebetür ist als zusätzliche Innentürart auswählbar. Bei Pfostenstock erscheint die optionale Auswahl Blindstock mit Ja oder Nein. Sie wird im Aufmaß gespeichert und in einer eigenen Spalte der Gesamttabelle sowie auf dem Einzelblatt ausgegeben. Bei bestehenden Aufmaßen ohne Angabe bleibt das Feld leer. Bei anderen Türarten wird kein Blindstock-Wert gedruckt. Die sechs Messungen und die bestehenden Abzugsregeln bleiben erhalten.
