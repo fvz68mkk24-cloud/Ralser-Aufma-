@@ -1,4 +1,4 @@
-const CACHE='ralser-aufmass-offline-v8-9';
+const CACHE='ralser-aufmass-offline-v8-10';
 const ASSETS=['./','./index.html','./manifest.webmanifest','./model.js','./app.js','./logo-ralser.jpg'];
 // Activate only after every offline file has been downloaded successfully.
 // Open forms are never reloaded automatically; localStorage is not modified here.
