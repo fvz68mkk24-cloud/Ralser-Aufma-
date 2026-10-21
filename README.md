@@ -42,3 +42,6 @@ Einzelblatt oder Gesamttabelle öffnen zunächst eine sichtbare Vorschau mit aus
 
 ## Updates ab Version 8.4
 Die neue Offline-Version aktiviert sich nach erfolgreichem Download aller App-Dateien, auch wenn ein altes Fenster offen ist. Geöffnete Formulare bleiben unverändert, bis die App bewusst neu geöffnet wird. Der Button „App aktualisieren“ sucht nach Updates; nach dem Download heißt er „Neue Version öffnen“. Vor dem Öffnen bitte Änderungen speichern. Keine Browserdaten löschen. Der Update-Test `node update.test.cjs` prüft den Wechsel von V8.1 mit offenem Fenster, unveränderte Datenablagen, einen ungespeicherten Entwurf und einen Offline-Neustart.
+
+## Druckfarben ab Version 8.5
+Fertigmaße erscheinen auf dem Einzelblatt und in der Gesamttabelle rot. Die Öffnungsrichtung erscheint in der Gesamttabelle als L mit hellgrünem Zellhintergrund beziehungsweise R mit hellrotem Zellhintergrund. Die Farben sind auch für den Druck angefordert; Drucker und Druckdialog können eine Schwarzweißausgabe erzwingen. Das Original-Logo fehlt noch und wird nach Bereitstellung ergänzt.
