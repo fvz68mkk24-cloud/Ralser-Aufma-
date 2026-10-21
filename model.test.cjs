@@ -6,3 +6,5 @@ assert.equal(R.finished({...d,kind:'Haustür',floorFinish:'wood'}).height,2095);
 const changed=structuredClone(migrated);changed.records['old-id'].data.hl='2200';const merged=R.merge(migrated,changed);assert.equal(Object.keys(merged.records).length,2);assert.equal(merged.records['old-id'].data.hl,'2100');assert.equal(merged.records['old-id-import-1'].data.hl,'2200');assert.equal(Object.keys(R.merge(merged,changed).records).length,2);
 assert.throws(()=>R.migrate({x:{data:null,updated:'x'}}));assert.throws(()=>R.validate({...migrated,projects:{}}));assert.equal(R.finished(d).width,896);assert.deepEqual(d,legacy['old-id'].data);
 console.log('OK: Migration, Originalmessungen, alle Abzüge, unvollständige Eingaben, konfliktfreier Import und Zuordnungen.');
+
+assert.equal(R.finished({...d,boden:'Ja'}).height,2095);assert.equal(R.finished({...d,boden:'Nein'}).height,null);assert.equal(R.finished({...d,boden:'Ja',floorFinish:'custom',customDeduction:''}).height,null);assert.equal(R.finished({...d,boden:'Ja',floorFinish:'wood'}).height,2081);
