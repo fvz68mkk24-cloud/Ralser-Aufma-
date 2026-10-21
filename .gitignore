@@ -1,0 +1,6 @@
+verification-*
+*.zip
+prepare.cjs
+update.cjs
+fix.cjs
+finalize.cjs
