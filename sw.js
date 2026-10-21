@@ -1,4 +1,4 @@
-const CACHE='ralser-aufmass-offline-v8';
+const CACHE='ralser-aufmass-offline-v8-a4';
 const ASSETS=['./','./index.html','./manifest.webmanifest','./model.js','./app.js'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS))));
 // A new worker activates when the previous app is closed, avoiding mixed versions.

@@ -10,8 +10,8 @@ Diese Version basiert auf dem unveränderten GitHub-Stand `2052c0ce201316c611a74
 - Innentür-Höhe: Boden verlegt 3 mm, Holzboden geplant 17 mm, Vinyl geplant 7 mm oder benutzerdefinierter Gesamtabzug. Bei Altbeständen ohne Bodenaufbau bleibt die Fertighöhe offen, bis der Bodenaufbau gewählt wird.
 - Pfostenstock-Breite: 3 mm Abzug; bei anderen Türarten kein automatischer Breitenabzug.
 - Haustür-Höhe: immer 3 mm Abzug, Messbezug Thermoholz.
-- A4-Einzelblatt des geöffneten Formulars mit leerem Skizzenfeld. A3-Gesamttabelle der gespeicherten Aufmaße des ausgewählten Bauvorhabens. Alle sechs Originalmessungen in beiden Ausgaben.
-- Druckdialog zum Speichern als PDF. A4 hoch / A3 quer werden per Druckstil vorgegeben; je nach Gerät im Druckdialog kontrollieren. Sehr lange Bemerkungen können zusätzliche Seiten beanspruchen.
+- A4-Einzelblatt des geöffneten Formulars mit leerem Skizzenfeld. A4-Gesamttabelle quer der gespeicherten Aufmaße des ausgewählten Bauvorhabens. Alle sechs Originalmessungen in beiden Ausgaben.
+- Druckdialog zum Speichern als PDF. A4 hoch / A4 quer werden per Druckstil vorgegeben; je nach Gerät im Druckdialog kontrollieren. Sehr lange Bemerkungen können zusätzliche Seiten beanspruchen.
 - Keine externen Bibliotheken, Schriftarten oder Netzwerkdienste. Offline nach einmaligem vollständigem Laden über HTTPS (oder localhost).
 
 ## Sicherer Wechsel auf dem iPhone
