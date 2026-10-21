@@ -28,7 +28,7 @@ Die automatische Übernahme wurde mit Testdaten geprüft. Echte iPhone-Daten lie
 
 ## Dateien zum Veröffentlichen
 
-Nur `index.html`, `app.js`, `model.js`, `sw.js` und `manifest.webmanifest` gemeinsam am bestehenden Web-App-Pfad ersetzen. Das ZIP `Ralser-Aufmass-V8.zip` enthält diese fünf Dateien und diese Anleitung. Veröffentlichung ändert die lokale Datenablage nicht direkt; die Migration erfolgt erst beim Öffnen der neuen App.
+Nur `index.html`, `app.js`, `model.js`, `sw.js`, `manifest.webmanifest` und `logo-ralser.jpg` gemeinsam am bestehenden Web-App-Pfad ersetzen. Das ZIP `Ralser-Aufmass-V8.zip` enthält diese sechs Dateien und diese Anleitung. Veröffentlichung ändert die lokale Datenablage nicht direkt; die Migration erfolgt erst beim Öffnen der neuen App.
 
 ## Prüfung
 
@@ -44,4 +44,7 @@ Einzelblatt oder Gesamttabelle öffnen zunächst eine sichtbare Vorschau mit aus
 Die neue Offline-Version aktiviert sich nach erfolgreichem Download aller App-Dateien, auch wenn ein altes Fenster offen ist. Geöffnete Formulare bleiben unverändert, bis die App bewusst neu geöffnet wird. Der Button „App aktualisieren“ sucht nach Updates; nach dem Download heißt er „Neue Version öffnen“. Vor dem Öffnen bitte Änderungen speichern. Keine Browserdaten löschen. Der Update-Test `node update.test.cjs` prüft den Wechsel von V8.1 mit offenem Fenster, unveränderte Datenablagen, einen ungespeicherten Entwurf und einen Offline-Neustart.
 
 ## Druckfarben ab Version 8.5
-Fertigmaße erscheinen auf dem Einzelblatt und in der Gesamttabelle rot. Die Öffnungsrichtung erscheint in der Gesamttabelle als L mit hellgrünem Zellhintergrund beziehungsweise R mit hellrotem Zellhintergrund. Die Farben sind auch für den Druck angefordert; Drucker und Druckdialog können eine Schwarzweißausgabe erzwingen. Das Original-Logo fehlt noch und wird nach Bereitstellung ergänzt.
+Fertigmaße erscheinen auf dem Einzelblatt und in der Gesamttabelle rot. Die Öffnungsrichtung erscheint in der Gesamttabelle als L mit hellgrünem Zellhintergrund beziehungsweise R mit hellrotem Zellhintergrund. Die Farben sind auch für den Druck angefordert; Drucker und Druckdialog können eine Schwarzweißausgabe erzwingen. Das Original-Logo ist ab Version 8.6 in beiden Druckansichten enthalten.
+
+## Logo ab Version 8.6
+Das vom Nutzer bereitgestellte Original-Logo liegt unverändert als `logo-ralser.jpg` bei und erscheint oben auf Einzelblatt und Gesamttabelle. Es ist Teil des Offline-Caches. Der Druckknopf wird erst nach Laden des Logos aktiv.

@@ -1,5 +1,5 @@
-const CACHE='ralser-aufmass-offline-v8-5';
-const ASSETS=['./','./index.html','./manifest.webmanifest','./model.js','./app.js'];
+const CACHE='ralser-aufmass-offline-v8-6';
+const ASSETS=['./','./index.html','./manifest.webmanifest','./model.js','./app.js','./logo-ralser.jpg'];
 // Activate only after every offline file has been downloaded successfully.
 // Open forms are never reloaded automatically; localStorage is not modified here.
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS.map(url=>new Request(url,{cache:'reload'})))).then(()=>self.skipWaiting())));
