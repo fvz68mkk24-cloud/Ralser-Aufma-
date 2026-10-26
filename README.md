@@ -64,3 +64,6 @@ Bei der Türart Schiebetür gilt für die Fertighöhe: größte der drei Origina
 Ab Version 8.11 verwenden Schiebetüren ausdrücklich die größte gemessene Höhe. Die Bodenabzüge bleiben 0 / 14 / 4 mm.
 
 Ab Version 8.12 verwenden Schiebetüren die größte gemessene Breite ohne Abzug. Beispiel: 1479 / 1480 / 1481 mm ergeben eine Fertigbreite von 1481 mm. Die größte Höhe und die Bodenabzüge bleiben erhalten.
+
+## Pfostenstockbreite ab Version 8.13
+Bei Pfostenstocktüren gilt die größte der drei gemessenen Breiten minus 3 mm. Beispiel: 1479 / 1480 / 1481 mm ergeben 1478 mm Fertigbreite. Die Höhenberechnung und alle anderen Türarten bleiben unverändert. Alle sechs Originalmessungen bleiben erhalten.

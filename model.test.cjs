@@ -1,10 +1,10 @@
 const assert=require('node:assert/strict');const R=require('./model.js');
 const d={kind:'Innentür',kunde:'Müller',position:'1a',hl:'2100',hm:'2098',hr:'2102',bo:'900',bm:'899',bu:'901',tuerart:'Pfostenstock',notes:'Original',extra:{unknown:'erhalten'}};
 const legacy={'old-id':{data:d,updated:'2026-10-20T12:00:00.000Z',custom:'Metadaten'}};const before=JSON.stringify(legacy);const migrated=R.migrate(legacy);assert.equal(JSON.stringify(legacy),before);assert.deepEqual(migrated.records['old-id'].data,d);assert.equal(migrated.records['old-id'].custom,'Metadaten');
-for(const [floorFinish,height] of [['laid',2095],['wood',2081],['vinyl',2091],['custom',2073]])assert.deepEqual(R.finished({...d,floorFinish,customDeduction:'25'}),{height,width:896,deduction:floorFinish==='custom'?25:{laid:3,wood:17,vinyl:7}[floorFinish]});
+for(const [floorFinish,height] of [['laid',2095],['wood',2081],['vinyl',2091],['custom',2073]])assert.deepEqual(R.finished({...d,floorFinish,customDeduction:'25'}),{height,width:898,deduction:floorFinish==='custom'?25:{laid:3,wood:17,vinyl:7}[floorFinish]});
 assert.equal(R.finished({...d,kind:'Haustür',floorFinish:'wood'}).height,2099);assert.equal(R.finished({...d,kind:'Haustür'}).width,898);assert.equal(R.finished({...d,tuerart:'Futterstock'}).width,899);assert.equal(R.finished({...d}).height,null);assert.equal(R.finished({...d,hl:'',floorFinish:'laid'}).height,null);assert.equal(R.finished({...d,hl:'abc',floorFinish:'laid'}).height,null);assert.equal(R.finished({...d,floorFinish:'custom',customDeduction:'-3'}).height,null);assert.equal(R.finished({...d,hm:'2098,5',floorFinish:'laid'}).height,2095.5);
 const changed=structuredClone(migrated);changed.records['old-id'].data.hl='2200';const merged=R.merge(migrated,changed);assert.equal(Object.keys(merged.records).length,2);assert.equal(merged.records['old-id'].data.hl,'2100');assert.equal(merged.records['old-id-import-1'].data.hl,'2200');assert.equal(Object.keys(R.merge(merged,changed).records).length,2);
-assert.throws(()=>R.migrate({x:{data:null,updated:'x'}}));assert.throws(()=>R.validate({...migrated,projects:{}}));assert.equal(R.finished(d).width,896);assert.deepEqual(d,legacy['old-id'].data);
+assert.throws(()=>R.migrate({x:{data:null,updated:'x'}}));assert.throws(()=>R.validate({...migrated,projects:{}}));assert.equal(R.finished(d).width,898);assert.deepEqual(d,legacy['old-id'].data);
 console.log('OK: Migration, Originalmessungen, alle Abzüge, unvollständige Eingaben, konfliktfreier Import und Zuordnungen.');
 
 assert.equal(R.finished({...d,boden:'Ja'}).height,2095);assert.equal(R.finished({...d,boden:'Nein'}).height,null);assert.equal(R.finished({...d,boden:'Ja',floorFinish:'custom',customDeduction:''}).height,null);assert.equal(R.finished({...d,boden:'Ja',floorFinish:'wood'}).height,2081);
@@ -14,3 +14,5 @@ const outer={kind:'Haustür',hl:'2309',hm:'2308',hr:'2309',bo:'1479',bm:'1480',b
 const sliding={...d,tuerart:'Schiebetür'};const slidingOriginal=JSON.stringify(sliding);for(const [floorFinish,deduction] of [['laid',0],['wood',14],['vinyl',4]])assert.deepEqual(R.finished({...sliding,floorFinish}),{height:2102-deduction,width:901,deduction});assert.equal(R.finished({...sliding,boden:'Ja'}).height,2102);assert.equal(R.finished({...sliding,floorFinish:'custom',customDeduction:'25'}).height,2077);assert.equal(R.finished({...sliding,floorFinish:'wood',hm:''}).height,null);assert.equal(JSON.stringify(sliding),slidingOriginal);
 
 assert.equal(R.finished({...sliding,bo:'1479',bm:'1480',bu:'1481'}).width,1481);assert.equal(R.finished({...sliding,bo:''}).width,null);
+
+assert.equal(R.finished({...d,bo:'1479',bm:'1480',bu:'1481'}).width,1478);assert.equal(R.finished({...d,bo:'',bm:'1480',bu:'1481'}).width,null);
