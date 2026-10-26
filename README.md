@@ -67,3 +67,6 @@ Ab Version 8.12 verwenden Schiebetüren die größte gemessene Breite ohne Abzug
 
 ## Pfostenstockbreite ab Version 8.13
 Bei Pfostenstocktüren gilt die größte der drei gemessenen Breiten minus 3 mm. Beispiel: 1479 / 1480 / 1481 mm ergeben 1478 mm Fertigbreite. Die Höhenberechnung und alle anderen Türarten bleiben unverändert. Alle sechs Originalmessungen bleiben erhalten.
+
+## Mauerstärke bei Schiebetüren ab Version 8.14
+Das vorhandene Feld für die Wand-/Mauerstärke ist nun auch bei der Türart Schiebetür sichtbar. Es wird ohne Änderung des Datenformats als `wandstaerke` gespeichert und auf dem Einzelblatt sowie in der Gesamttabelle unter „Wand“ ausgegeben. Die Abzugsregeln bleiben unverändert.
