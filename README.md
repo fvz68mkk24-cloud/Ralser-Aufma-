@@ -70,3 +70,12 @@ Bei Pfostenstocktüren gilt die größte der drei gemessenen Breiten minus 3 mm.
 
 ## Mauerstärke bei Schiebetüren ab Version 8.14
 Das vorhandene Feld für die Wand-/Mauerstärke ist nun auch bei der Türart Schiebetür sichtbar. Es wird ohne Änderung des Datenformats als `wandstaerke` gespeichert und auf dem Einzelblatt sowie in der Gesamttabelle unter „Wand“ ausgegeben. Die Abzugsregeln bleiben unverändert.
+
+## Futterstock-Angleichung ab Version 8.15
+Ausschließlich bei Futterstock-Innentüren gelten für Höhe und Breite die größten jeweiligen Originalmessungen minus 30 bis minus 20 mm. Alle gespeicherten Futterstocktüren desselben Bauvorhabens werden gemeinsam betrachtet. Die gemeinsame Untergrenze ist die größte Einzel-Untergrenze, die gemeinsame Obergrenze die kleinste Einzel-Obergrenze. Gewählt wird die gemeinsame Obergrenze, also das größte gemeinsam zulässige Fertigmaß. Bodenabzüge werden bei dieser Futterstock-Regel nicht zusätzlich abgezogen.
+
+Die App zeigt je Position die zulässigen Bereiche. Bei fehlenden Messungen oder nicht überlappenden Bereichen bleibt die betroffene gemeinsame Dimension offen und wird ausdrücklich als unvollständig beziehungsweise ohne gemeinsame Lösung gekennzeichnet. Es wird kein unzulässiges gemeinsames Maß erzwungen. Ein einzelner Futterstock erhält entsprechend 20 mm Abzug vom größten Maß. Änderungen, neue Aufmaße, Zuordnungen und Löschungen verändern gegebenenfalls die gemeinsamen Fertigmaße der gesamten Futterstock-Gruppe.
+
+Berechnungen erfolgen aus den Originalmessungen, ohne sie zu überschreiben. Es gibt keine Datenformatänderung. Im Formular wird ein ungespeicherter Entwurf anstelle des geöffneten gespeicherten Aufmaßes berücksichtigt; die Gesamttabelle verwendet ausschließlich den gespeicherten Stand. Einzelblatt und Gesamttabelle geben dieselben gemeinsamen Maße aus. Pfostenstock, Haustüren und Schiebetüren sowie Mauerstärke und Blindstock bleiben unverändert.
+
+`node futterstock.test.cjs` prüft die Angleichung im Browser einschließlich Projekttrennung, Entwurf, Konflikten, Löschung, Druckansichten, Originalbestand und Offline-Neustart. `node model.test.cjs` enthält zusätzlich Grenzfalltests mit genau 10 mm Unterschied und nicht überlappenden Spannen.
