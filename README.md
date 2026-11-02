@@ -79,3 +79,6 @@ Die App zeigt je Position die zulässigen Bereiche. Bei fehlenden Messungen oder
 Berechnungen erfolgen aus den Originalmessungen, ohne sie zu überschreiben. Es gibt keine Datenformatänderung. Im Formular wird ein ungespeicherter Entwurf anstelle des geöffneten gespeicherten Aufmaßes berücksichtigt; die Gesamttabelle verwendet ausschließlich den gespeicherten Stand. Einzelblatt und Gesamttabelle geben dieselben gemeinsamen Maße aus. Pfostenstock, Haustüren und Schiebetüren sowie Mauerstärke und Blindstock bleiben unverändert.
 
 `node futterstock.test.cjs` prüft die Angleichung im Browser einschließlich Projekttrennung, Entwurf, Konflikten, Löschung, Druckansichten, Originalbestand und Offline-Neustart. `node model.test.cjs` enthält zusätzlich Grenzfalltests mit genau 10 mm Unterschied und nicht überlappenden Spannen.
+
+## Pfostenstockhöhe ab Version 8.16
+Die Fertighöhe von Pfostenstocktüren verwendet jetzt die größte der drei gemessenen Höhen minus den bisherigen Bodenabzug: 3 mm bei verlegtem Boden, 17 mm bei geplantem Holzboden, 7 mm bei Vinyl oder den benutzerdefinierten Abzug. Die Fertigbreite bleibt größte Breite minus 3 mm. Andere Türarten, Futterstock-Angleichung und Originalmessungen bleiben unverändert.
