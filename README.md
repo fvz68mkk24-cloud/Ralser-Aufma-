@@ -82,3 +82,6 @@ Berechnungen erfolgen aus den Originalmessungen, ohne sie zu überschreiben. Es 
 
 ## Pfostenstockhöhe ab Version 8.16
 Die Fertighöhe von Pfostenstocktüren verwendet jetzt die größte der drei gemessenen Höhen minus den bisherigen Bodenabzug: 3 mm bei verlegtem Boden, 17 mm bei geplantem Holzboden, 7 mm bei Vinyl oder den benutzerdefinierten Abzug. Die Fertigbreite bleibt größte Breite minus 3 mm. Andere Türarten, Futterstock-Angleichung und Originalmessungen bleiben unverändert.
+
+## Haustüren ohne Thermoholz ab Version 8.17
+Nur bei „Thermoholz: Ja“ gilt der feste Höhenabzug von 3 mm von der größten Höhe. Bei „Thermoholz: Nein“ oder noch nicht gewähltem Thermoholz ist die Bodenauswahl aktiv: verlegter Boden 3 mm, geplanter Holzboden 17 mm, Vinyl 7 mm oder benutzerdefinierter Abzug. Ohne ausreichende Bodenangabe bleibt die Fertighöhe offen. Die Fertigbreite bleibt immer größte Breite minus 3 mm. Alle Originalmessungen, anderen Türarten und die Futterstock-Angleichung bleiben unverändert. Speichern, erneutes Öffnen und beide Druckausgaben sind geprüft.
