@@ -95,3 +95,16 @@ Innerhalb eines Bauvorhabens zeigt die Kopfkarte den Kunden und das Bauvorhaben.
 
 ## Bauvorhabenarten ab Version 8.19
 Beim Anlegen eines neuen Bauvorhabens werden Wohnung, FeWo oder Benutzerdefiniert ausgewählt. Wohnung übernimmt direkt den Namen „Wohnung“. FeWo benötigt eine Nummer und erhält z. B. den Namen „FeWo 12“; führende Nullen bleiben erhalten. Benutzerdefiniert benötigt einen frei eingegebenen Namen. Die gewählte Art und gegebenenfalls FeWo-Nummer werden als zusätzliche Projektangaben gespeichert. Bestehende Bauvorhaben werden nicht verändert. In Auswahl, Messkopf und Ausdrucken wird weiterhin der gespeicherte Projektname verwendet. Die Rechenregeln und alle Originalmessungen bleiben erhalten.
+
+## Aufmaß-Ablauf ab Version 8.20
+Die Reihenfolge lautet jetzt: 1. Tür zuordnen, 2. Türangaben einschließlich Bodenaufbau, 3. Maße einschließlich Haustür-Kabelhöhen, 4. Bemerkungen, 5. Fertigmaße prüfen und speichern.
+
+Die Raumauswahl enthält Küche, Wohnzimmer, Schlafzimmer, Badezimmer, Tages WC, HWR, Zimmer mit Nummer, Garderobe und freie Eingabe. Gespeichert wird weiterhin der Raumname als Text, z. B. „Zimmer 03“. Bereits vorhandene freie Raumnamen werden verlustfrei in die freie Eingabe übernommen.
+
+„Neues Aufmaß“ übernimmt die gewählte Türart/Stockart und den Boden einschließlich benutzerdefiniertem Abzug sowie den Thermoholz-Bezug. Raum, Öffnungsrichtung, Blindstock, Bemerkungen und sämtliche Maßfelder bleiben leer. Es wird eine neue Position vorgeschlagen und die Ansicht springt nach oben. Die Messfelder umfassen dabei auch Mauerstärke und Kabelhöhen.
+
+„Aufmaß kopieren“ ist sowohl am geöffneten gespeicherten Aufmaß als auch in der Liste verfügbar. Zusätzlich zu Stock und Boden werden Öffnungsrichtung und Blindstock übernommen; Raum, Bemerkungen und sämtliche Maße werden geleert. Die Kopie erhält erst beim Speichern eine neue eigene Kennung. Das ursprüngliche Aufmaß bleibt unverändert.
+
+Die Vollständigkeitsanzeige weist auf fehlende Position, Datum, Raum/Zimmernummer, die sechs Messungen, Öffnungsrichtung, Stockart und erforderliche Bodenangaben hin. Unvollständige Aufmaße sind weiterhin speicherbar und werden in der Liste als Entwurf gekennzeichnet. Mauerstärke, Kabelhöhen, Blindstock und Bemerkungen werden dadurch nicht zu Pflichtangaben. Die bisherigen Abzugsregeln einschließlich Futterstock-Angleichung bleiben unverändert.
+
+`node workflow.test.cjs` prüft Reihenfolge, alle Raumoptionen, nummerierte Zimmer, alte Raumnamen, das Übernehmen von Angaben, leere Messfelder, Nach-oben-Sprung, Abbruch beim Verwerfen, Entwürfe, beide Kopierfunktionen, neue Kennungen, Schutz der Originalmessungen und Offline-Neustart.
