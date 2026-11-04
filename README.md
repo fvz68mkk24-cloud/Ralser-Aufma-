@@ -108,3 +108,8 @@ Die Raumauswahl enthält Küche, Wohnzimmer, Schlafzimmer, Badezimmer, Tages WC,
 Die Vollständigkeitsanzeige weist auf fehlende Position, Datum, Raum/Zimmernummer, die sechs Messungen, Öffnungsrichtung, Stockart und erforderliche Bodenangaben hin. Unvollständige Aufmaße sind weiterhin speicherbar und werden in der Liste als Entwurf gekennzeichnet. Mauerstärke, Kabelhöhen, Blindstock und Bemerkungen werden dadurch nicht zu Pflichtangaben. Die bisherigen Abzugsregeln einschließlich Futterstock-Angleichung bleiben unverändert.
 
 `node workflow.test.cjs` prüft Reihenfolge, alle Raumoptionen, nummerierte Zimmer, alte Raumnamen, das Übernehmen von Angaben, leere Messfelder, Nach-oben-Sprung, Abbruch beim Verwerfen, Entwürfe, beide Kopierfunktionen, neue Kennungen, Schutz der Originalmessungen und Offline-Neustart.
+
+## Schiebetüren ohne Öffnungsrichtung ab Version 8.21
+Bei der Türart Schiebetür ist die Öffnungsrichtung ausgeblendet und wird bei der Vollständigkeitsprüfung nicht verlangt. Eine ansonsten vollständige Schiebetür kann ohne Richtung regulär gespeichert werden. Das Einzelblatt enthält keine Öffnungsrichtung; in der Gesamttabelle bleibt das Richtungsfeld bei Schiebetüren leer und erhält keine L/R-Farbe. Neue Kopien von Schiebetüren übernehmen keine Richtung.
+
+Eventuell vorhandene Richtungsangaben alter Aufmaße werden nicht aus den gespeicherten Daten gelöscht. Bei Pfostenstock, Futterstock und Haustüren bleibt die Öffnungsrichtung sichtbar und für eine vollständige Erfassung erforderlich. Die bestehenden Maße und Berechnungsregeln bleiben unverändert. Der Workflow-Test prüft Speichern ohne Richtung, beide Druckansichten und den Wechsel zurück zu anderen Türarten.
