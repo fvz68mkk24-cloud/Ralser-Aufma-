@@ -85,3 +85,10 @@ Die Fertighöhe von Pfostenstocktüren verwendet jetzt die größte der drei gem
 
 ## Haustüren ohne Thermoholz ab Version 8.17
 Nur bei „Thermoholz: Ja“ gilt der feste Höhenabzug von 3 mm von der größten Höhe. Bei „Thermoholz: Nein“ oder noch nicht gewähltem Thermoholz ist die Bodenauswahl aktiv: verlegter Boden 3 mm, geplanter Holzboden 17 mm, Vinyl 7 mm oder benutzerdefinierter Abzug. Ohne ausreichende Bodenangabe bleibt die Fertighöhe offen. Die Fertigbreite bleibt immer größte Breite minus 3 mm. Alle Originalmessungen, anderen Türarten und die Futterstock-Angleichung bleiben unverändert. Speichern, erneutes Öffnen und beide Druckausgaben sind geprüft.
+
+## Einstieg ab Version 8.18
+Beim Öffnen erscheint zunächst ausschließlich die Auswahl von Kunde und Bauvorhaben. Messfelder und gespeicherte Aufmaße bleiben bis „Bauvorhaben öffnen“ ausgeblendet. Die Bauvorhabenauswahl enthält nur Vorhaben des gewählten Kunden. Neue Kunden und Bauvorhaben können über aufklappbare Bereiche angelegt werden.
+
+Innerhalb eines Bauvorhabens zeigt die Kopfkarte den Kunden und das Bauvorhaben. „Auswahl ändern“ führt zurück. Ein ungespeicherter Entwurf bleibt bei der Rückkehr zum selben Vorhaben erhalten; beim tatsächlichen Wechsel schützt die bisherige Rückfrage vor versehentlichem Verwerfen. Messungen, Berechnungen und Druckansichten bleiben unverändert. Das Zuordnen eines geöffneten Aufmaßes ist im Messbereich aufklappbar. Sicherung, Import und Aktualisierung sind jederzeit unter „Sicherung & App“ erreichbar. Die Startauswahl wird bei jedem App-Neustart wieder angezeigt; die Datenablage bleibt unverändert.
+
+`node navigation.test.cjs` prüft Startansicht, Kundenfilter, neue Kunden und Vorhaben, Rückkehr mit Entwurf, Abbruch eines Wechsels, Sicherung und Offline-Neustart. Die bestehenden Browser-, Futterstock- und Update-Tests wurden an den Auswahl-Schritt angepasst und bestehen weiterhin.
